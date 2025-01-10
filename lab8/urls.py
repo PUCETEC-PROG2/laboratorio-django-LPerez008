@@ -15,9 +15,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include 
+from lab8 import settings #importar par que urlpatterns de media funcione.
+from django.conf.urls.static import static #importar par que urlpatterns de media funcione.
 
 urlpatterns = [
+    path('', include('pokedex.urls')),
     path('admin/', admin.site.urls),
-    path('pokedex/', include('pokedex.urls'))
+    path('accounts/', include('django.contrib.auth.urls'))
 ]
+
+urlpatterns +=  static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #Incluir urls de la carpeta media

@@ -122,3 +122,20 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+STATICFILES_DIR = [
+    BASE_DIR / 'static'
+]
+
+#Manejo de archivos dinámicos
+
+MEDIA_URL = "media/"   #A través de que url se accede al archivo a nivel navegador
+MEDIA_ROOT = BASE_DIR / 'media'  #Donde se almacena el archivo
+
+
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
+LOGIN_URL = "pokedex:login"
