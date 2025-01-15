@@ -6,6 +6,7 @@ app_name = 'pokedex' #Parte importante para poder traabajar con formularios.
 
 urlpatterns = [
     path("", views.index, name="index"), #Pantalla de Pokemons
+    path("trainers/", views.trainers, name="trainers"), #Pantalla de Pokemons
     path("<int:pokemon_id>/", views.pokemon, name="pokemon"),
     path("trainer/<int:trainer_id>/", views.trainer_detail, name="trainer"),
     path("add_pokemon/", views.add_pokemon, name="add_pokemon"), #Añadir nuevo path
