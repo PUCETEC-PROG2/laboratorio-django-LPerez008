@@ -1,3 +1,10 @@
 .logo{
     width: 400px;
 }
+
+
+/*modificar imagenes de trainers*/
+.trainer_img{
+    width: 100px;
+    margin: auto;  /*Establece margen automático para los cuatro lados*/
+}
